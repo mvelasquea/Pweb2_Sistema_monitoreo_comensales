@@ -1,4 +1,5 @@
 from colors import *
+
 class Picture:
   def __init__(self, img):
     self.img = img
@@ -11,6 +12,7 @@ class Picture:
       return color
     return inverter[color]
 
+<<<<<<< HEAD
   def verticalMirror(self):
     """ Devuelve el espejo vertical de la imagen """
     vertical = []
@@ -37,33 +39,33 @@ class Picture:
           imagen_invertida.append(cadena_invertida)
     return Picture(imagen_invertida)
   
+=======
+>>>>>>> 8d6e8c5537e09899bf420f998016c6925f1344c6
   def join(self, p):
-    """ Devuelve una nueva figura poniendo la figura del argumento 
-        al lado derecho de la figura actual """
-    return Picture(None)
+    """funcioin para rpetir la imagen  """
+    nuevaImagen = []
 
-  def up(self, p):
-    return Picture(None)
+    for index, value in enumerate(self.img):
+      nuevaImagen.append(list(value) + list(p.img[index]))
 
-  def under(self, p):
-    """ Devuelve una nueva figura poniendo la figura p sobre la
-        figura actual """
-    return Picture(None)
+    return Picture(nuevaImagen)
+  
+  
   
   def horizontalRepeat(self, n):
+<<<<<<< HEAD
     """ Devuelve una nueva figura repitiendo la figura actual al costado
         la cantidad de veces que indique el valor de n """
     nueva_imagen=[]
     for imagenes in self.img:
       nueva_imagen.append(imagenes*n)
     return Picture(nueva_imagen)
+=======
+    """ realiza la repeticion pero horizontal """
+    # aux = self
+    for _ in range(n-1):
+      aux = aux.join(self) 
+    return aux
+>>>>>>> 8d6e8c5537e09899bf420f998016c6925f1344c6
 
-  def verticalRepeat(self, n):
-    return Picture(None)
-
-  #Extra: Sólo para realmente viciosos 
-  def rotate(self):
-    """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
-    o antihorario"""
-    return Picture(None)
 

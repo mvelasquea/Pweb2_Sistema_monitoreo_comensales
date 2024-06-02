@@ -1,7 +1,4 @@
 from chessPictures import *
-<<<<<<< HEAD
-draw(queen.horizontalRepeat(7))
-=======
 from interpreter import draw
 from picture import Picture
 from colors import *
@@ -12,4 +9,3 @@ tab = queen
 tab = Picture.horizontalRepeat(queen, 4)
 draw(tab)
 
->>>>>>> 8d6e8c5537e09899bf420f998016c6925f1344c6
