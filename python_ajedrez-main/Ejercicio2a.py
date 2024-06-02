@@ -1,8 +1,6 @@
 from chessPictures import *
 <<<<<<< HEAD
 from interpreter import draw
-from picture import Picture
-from colors import *
 
 tab = knight
 #llama a la picture creando la primera coluna 
