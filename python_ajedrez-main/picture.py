@@ -1,7 +1,7 @@
 from colors import *
 class Picture:
   def __init__(self, img):
-    self.img = img;
+    self.img = img
 
   def __eq__(self, other):
     return self.img == other.img
@@ -16,6 +16,7 @@ class Picture:
     vertical = []
     for value in self.img:
     	vertical.append(value[::-1])
+
     return vertical
 
   def horizontalMirror(self):
@@ -24,8 +25,18 @@ class Picture:
 
   def negative(self):
     """ Devuelve un negativo de la imagen """
-    return Picture(None)
-
+    imagen_invertida=[]
+    for cadena in self.img:
+          cadena_invertida=str("")
+          for caracter in cadena:
+            if caracter == ".": 
+              cadena_invertida=cadena_invertida+str(inverter.get(caracter))
+            else :
+              cadena_invertida=cadena_invertida+caracter
+          print(cadena_invertida)
+          imagen_invertida.append(cadena_invertida)
+    return Picture(imagen_invertida)
+  
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
@@ -42,7 +53,10 @@ class Picture:
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
         la cantidad de veces que indique el valor de n """
-    return Picture(None)
+    nueva_imagen=[]
+    for imagenes in self.img:
+      nueva_imagen.append(imagenes*n)
+    return Picture(nueva_imagen)
 
   def verticalRepeat(self, n):
     return Picture(None)
