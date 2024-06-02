@@ -25,9 +25,9 @@ class Picture:
   
   def horizontalRepeat(self, n):
     """ realiza la repeticion pero horizontal """
-    aux = self
+    # aux = self
     for _ in range(n-1):
       aux = aux.join(self) 
     return aux
 
-  
+
