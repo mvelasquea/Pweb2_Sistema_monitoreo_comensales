@@ -92,24 +92,3 @@ de veces que indique el valor de n"""
     for _ in range(n-1):
       aux = aux.up(self) 
     return aux
-
-  def rotate(self):
-  
-    #generar la matriz de carateres original!
-    matrizOriginal = []
-    for value in self.img:
-      matrizOriginal.append(value)
-
-    #actualizamos cada valor en la matriz
-    size = len(matrizOriginal)
-    matrizRotate = [['' for _ in range(size)] for _ in range(size)]     #crea una matriz vacia!
-
-    print("El tamaño de esa matriz es: ", size)
-    for i in range(len(matrizOriginal)):
-      for j in range(len(matrizOriginal[i])):
-        print("Indices de rotate: ", size - j - 1, " y ", i)
-        print("Se accede al caracter: ", matrizRotate[size - j - 1][i])
-        matrizRotate[size - j - 1][i] =  matrizOriginal[i][j]
-
-
-    return Picture(matrizRotate)
